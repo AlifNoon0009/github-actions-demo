@@ -1,0 +1,29 @@
+name: Practical Implementation of my CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  automation-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository Code
+        uses: actions/checkout@v4
+
+      
+      - name: Show Current Directory
+        run: pwd
+
+  
+      - name: List Files
+        run: ls -la
+
+     
+      - name: Make Directory
+        run: mkdir assignment-folder
+
+      
+      - name: Print Learning Message
+        run: echo "I am learning Github Actions"
